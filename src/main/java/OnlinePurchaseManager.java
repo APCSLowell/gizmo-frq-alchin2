@@ -9,14 +9,17 @@ public class OnlinePurchaseManager
   /** Returns the number of purchased Gizmo objects that are electronic
   * whose manufacturer is maker, as described in part (a).
   */
-  public int countElectronicsByMaker(String maker)
-  {
+ public int countElectronicsByMaker(String maker)
+{
     int count = 0;
-    for( int i = 0; i < purchases.size();i++){
-      if(purchases.get(i).isElectronic()&&purchases.get(i).getMaker.equals(maker)){
-        count++;}
-    }return count;
-  }
+    for (int i = 0; i < purchases.size(); i++) {
+        if (purchases.get(i).isElectronic() && purchases.get(i).getMaker().equals(maker)) {
+            count++;
+        }
+    }
+    return count;
+}
+
   
   /** Returns true if any pair of adjacent purchased Gizmo objects are
   * equivalent, and false otherwise, as described in part (b).
@@ -27,7 +30,7 @@ public class OnlinePurchaseManager
     if(purchases.get(i).equals(purchases.get(i+1))){
       return true;
     }
-  }return false;
+  }return false;}
   public OnlinePurchaseManager()
   {
     purchases = new ArrayList <Gizmo>();
